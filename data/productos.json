@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mouse Inalámbrico ProClick",
+    "categoria": "Periféricos",
+    "precio": 14990,
+    "stock": 25,
+    "descripcion": "Mouse inalámbrico ergonómico con sensor óptico de alta precisión y batería de larga duración.",
+    "imagen": "img/mouse.svg"
+  },
+  {
+    "id": 2,
+    "nombre": "Teclado Mecánico NovaKey",
+    "categoria": "Periféricos",
+    "precio": 39990,
+    "stock": 15,
+    "descripcion": "Teclado mecánico retroiluminado RGB con switches táctiles y reposamuñecas incluido.",
+    "imagen": "img/teclado.svg"
+  },
+  {
+    "id": 3,
+    "nombre": "Audífonos Bluetooth EchoPods",
+    "categoria": "Audio",
+    "precio": 24990,
+    "stock": 30,
+    "descripcion": "Audífonos inalámbricos con cancelación de ruido y estuche de carga rápida.",
+    "imagen": "img/audifonos.svg"
+  },
+  {
+    "id": 4,
+    "nombre": "Monitor LED 24\" VisionMax",
+    "categoria": "Pantallas",
+    "precio": 119990,
+    "stock": 8,
+    "descripcion": "Monitor Full HD de 24 pulgadas con bordes delgados, ideal para oficina y gaming casual.",
+    "imagen": "img/monitor.svg"
+  },
+  {
+    "id": 5,
+    "nombre": "SSD Externo 1TB DataFly",
+    "categoria": "Almacenamiento",
+    "precio": 54990,
+    "stock": 18,
+    "descripcion": "Disco de estado sólido portátil con conexión USB-C y velocidad de transferencia ultrarrápida.",
+    "imagen": "img/ssd.svg"
+  },
+  {
+    "id": 6,
+    "nombre": "Webcam Full HD StreamCam",
+    "categoria": "Periféricos",
+    "precio": 29990,
+    "stock": 20,
+    "descripcion": "Cámara web 1080p con enfoque automático y micrófono integrado, perfecta para videollamadas.",
+    "imagen": "img/webcam.svg"
+  },
+  {
+    "id": 7,
+    "nombre": "Hub USB-C 7 en 1 ConnectAll",
+    "categoria": "Accesorios",
+    "precio": 22990,
+    "stock": 22,
+    "descripcion": "Adaptador multipuerto con HDMI, USB 3.0, lector SD y carga USB-C simultánea.",
+    "imagen": "img/hub.svg"
+  },
+  {
+    "id": 8,
+    "nombre": "Cargador Rápido GaN 65W",
+    "categoria": "Accesorios",
+    "precio": 18990,
+    "stock": 0,
+    "descripcion": "Cargador compacto de tecnología GaN compatible con notebooks, tablets y smartphones.",
+    "imagen": "img/cargador.svg"
+  },
+  {
+    "id": 9,
+    "nombre": "Parlante Bluetooth BoomBox Mini",
+    "categoria": "Audio",
+    "precio": 27990,
+    "stock": 12,
+    "descripcion": "Parlante portátil resistente al agua con 12 horas de batería y sonido envolvente.",
+    "imagen": "img/parlante.svg"
+  }
+]

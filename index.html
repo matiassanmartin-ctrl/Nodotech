@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NodoTech — Tienda de Tecnología</title>
+<meta name="description" content="NodoTech: periféricos, audio, pantallas y accesorios tecnológicos.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#inicio" class="brand">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span class="brand-name">Nodo<strong>Tech</strong></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="navMenu" class="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#quienes-somos">Quiénes somos.</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#carrito" class="nav-cart">🛒 <span id="navCartCount">0</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- INICIO -->
+  <section id="inicio" class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">// catálogo tecnológico en línea</p>
+      <h1>Equipa tu setup con <span class="accent">NodoTech</span></h1>
+      <p class="hero-lead">Periféricos, audio y accesorios pensados para quienes trabajan, estudian y juegan frente a una pantalla. Stock real, precios claros, despacho simple.</p>
+      <div class="hero-actions">
+        <a href="#productos" class="btn btn-primary">Ver productos</a>
+        <a href="#quienes-somos" class="btn btn-ghost">Quiénes somos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIENES SOMOS -->
+  <section id="quienes-somos" class="section section-alt">
+    <div class="container">
+      <p class="eyebrow">// quiénes somos</p>
+      <h2>Tecnología pensada para el uso real</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>NodoTech nació de una idea simple: comprar tecnología no debería ser complicado. Somos una tienda en línea dedicada a periféricos, audio y accesorios para computador, pensada para estudiantes, profesionales y cualquier persona que pase su día frente a una pantalla.</p>
+          <p>Nuestro público son personas que buscan equipos confiables, sin relleno técnico innecesario, con información clara sobre precio, stock y características.</p>
+        </div>
+        <div class="about-values">
+          <article class="value-card">
+            <h3>Misión</h3>
+            <p>Acercar tecnología útil y de buen precio a quien la necesita, con una experiencia de compra simple.</p>
+          </article>
+          <article class="value-card">
+            <h3>Visión</h3>
+            <p>Ser la tienda de referencia en accesorios tecnológicos para el día a día.</p>
+          </article>
+          <article class="value-card">
+            <h3>Valores</h3>
+            <p>Transparencia en precios, atención cercana y productos probados.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="section">
+    <div class="container">
+      <p class="eyebrow">// catálogo</p>
+      <h2>Nuestros productos</h2>
+      <p class="section-lead">Selecciona los productos que quieras comprar e indica la cantidad. El total se calcula automáticamente.</p>
+
+      <div class="filters" id="filtros" aria-label="Filtrar por categoría"></div>
+
+      <div id="productGrid" class="product-grid" aria-live="polite">
+        <p class="loading-msg">Cargando productos…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARRITO / BOLETA -->
+  <section id="carrito" class="section section-alt">
+    <div class="container">
+      <p class="eyebrow">// tu compra</p>
+      <h2>Resumen de compra</h2>
+      <p class="section-lead">Revisa tu selección, completa tus datos y envía la boleta de prueba a tu correo.</p>
+
+      <div class="cart-layout">
+        <div class="cart-summary">
+          <table class="cart-table" id="cartTable">
+            <thead>
+              <tr><th>Producto</th><th>Cant.</th><th>Subtotal</th><th></th></tr>
+            </thead>
+            <tbody id="cartBody">
+              <tr class="cart-empty-row"><td colspan="4">Aún no has agregado productos.</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="2">Total</td><td id="cartTotal">$0</td><td></td></tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <form id="formCompra" class="form-card" novalidate
+              action="https://formsubmit.co/TU-CORREO@ejemplo.com" method="POST">
+          <h3>Datos de la boleta</h3>
+
+          <div class="form-group">
+            <label for="compraNombre">Nombre completo</label>
+            <input type="text" id="compraNombre" name="nombre" required minlength="3" autocomplete="name">
+            <span class="error-msg" id="errCompraNombre"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="compraCorreo">Correo electrónico</label>
+            <input type="email" id="compraCorreo" name="email" required autocomplete="email">
+            <span class="error-msg" id="errCompraCorreo"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="compraTelefono">Teléfono (opcional)</label>
+            <input type="tel" id="compraTelefono" name="telefono" inputmode="numeric" placeholder="987654321">
+            <span class="error-msg" id="errCompraTelefono"></span>
+          </div>
+
+          <input type="hidden" name="_subject" value="Nueva boleta — NodoTech">
+          <input type="hidden" name="detalle_compra" id="detalleCompra">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="gracias.html">
+
+          <span class="error-msg" id="errCarritoVacio"></span>
+
+          <button type="submit" class="btn btn-primary btn-block">Enviar boleta por correo</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <p class="eyebrow">// contacto</p>
+      <h2>¿Tienes una consulta?</h2>
+      <p class="section-lead">Escríbenos y te respondemos a la brevedad. Este formulario es independiente del de compra.</p>
+
+      <form id="formContacto" class="form-card form-card-contact" novalidate
+            action="https://formsubmit.co/TU-CORREO@ejemplo.com" method="POST">
+        <div class="form-group">
+          <label for="contNombre">Nombre</label>
+          <input type="text" id="contNombre" name="nombre" required minlength="3" autocomplete="name">
+          <span class="error-msg" id="errContNombre"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="contCorreo">Correo electrónico</label>
+          <input type="email" id="contCorreo" name="email" required autocomplete="email">
+          <span class="error-msg" id="errContCorreo"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="contAsunto">Asunto</label>
+          <input type="text" id="contAsunto" name="asunto" required minlength="3">
+          <span class="error-msg" id="errContAsunto"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="contMensaje">Mensaje</label>
+          <textarea id="contMensaje" name="mensaje" rows="5" required minlength="10"></textarea>
+          <span class="error-msg" id="errContMensaje"></span>
+        </div>
+
+        <input type="hidden" name="_subject" value="Nuevo mensaje de contacto — NodoTech">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="gracias.html">
+
+        <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>NodoTech — Proyecto académico de evaluación UMM, Programación Web.</p>
+    <p class="footer-note">La boleta generada es un comprobante de prueba, sin validez tributaria.</p>
+  </div>
+</footer>
+
+<!-- Plantilla de tarjeta de producto (usada por JS) -->
+<template id="productCardTemplate">
+  <article class="product-card">
+    <div class="product-img"><img src="" alt=""></div>
+    <div class="product-body">
+      <span class="product-category"></span>
+      <h3 class="product-name"></h3>
+      <p class="product-desc"></p>
+      <p class="product-price"></p>
+      <p class="product-stock"></p>
+      <div class="qty-control">
+        <button type="button" class="qty-btn qty-minus" aria-label="Disminuir cantidad">−</button>
+        <input type="number" class="qty-input" value="0" min="0" inputmode="numeric" aria-label="Cantidad">
+        <button type="button" class="qty-btn qty-plus" aria-label="Aumentar cantidad">+</button>
+      </div>
+      <button type="button" class="btn btn-add">Agregar al carrito</button>
+    </div>
+  </article>
+</template>
+
+<script src="js/app.js"></script>
+</body>
+</html>
